@@ -1,0 +1,27 @@
+services:
+  node0:
+    build: .
+    command: ["python", "-u", "node.py", "0"]
+    ports:
+      - "12121:12121"
+
+  node1:
+    build: .
+    command: ["python", "-u", "node.py", "1"]
+    ports:
+      - "12122:12122"
+
+  node2:
+    build: .
+    command: ["python", "-u", "node.py", "2"]
+    ports:
+      - "12123:12123"
+
+  node3:
+    build: .
+    command: ["python", "-u", "node.py", "3"]
+    ports:
+      - "12124:12124"
+
+networks:
+  default:
